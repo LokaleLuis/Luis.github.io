@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Luis Portfolio</title>
+  </head>
+  <body>
+    <!--Sticky socials-->
+    <div id="social-box" class="social-box">
+      <ul>
+        <li>
+          <a href="tel:+310627336370">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:l.maerkens@icloud.com">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li>
+          <a href="conntact.html"
+            ><i
+              class="fa-solid fa-arrow-up-right-from-square"
+              aria-hidden="true"
+            ></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <!--Name tex-->
+    <div class="name-box">
+      <h1 class="name" style="color: #b7ab98">Luis</h1>
+      <h1 class="name" style="color: #eb5939">Maerkens</h1>
+    </div>
+    <!--Loop Animation-->
+    <div class="animation-box">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player
+        src="https://lottie.host/157cd63e-f2f2-49e4-b1f5-7f3093c4daeb/x9xRT3LvoB.json"
+        background="##F2F2F2"
+        speed="0.3"
+        class="animation"
+        loop
+        autoplay
+        direction="1"
+        mode="normal"
+      ></lottie-player>
+    </div>
+    <div class="animation-box2">
+      <script
+        src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"
+      ></script>
+      <dotlottie-player
+        src="https://lottie.host/b898c8e7-bf15-4148-8936-88f53bf17343/6G8uprpkLO.json"
+        background="transparent"
+        speed="0.5"
+        style="width: 300px; height: 300px"
+        loop
+        autoplay
+      ></dotlottie-player>
+    </div>
+    <div class="animation-box3">
+      <script
+        src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"
+      ></script>
+      <dotlottie-player
+        src="https://lottie.host/f5231461-2f96-4ce5-bd3f-917cda5da38d/XYrNK0bjOD.json"
+        background="transparent"
+        speed="0.4"
+        style="width: 1500px; height: 450px"
+        loop
+        autoplay
+      ></dotlottie-player>
+    </div>
+
+    <!--Head text-->
+    <div id="container">
+      <h1 class="text">Always<span>Started</span></h1>
+      <h1 class="text">Been<span>Having</span></h1>
+      <h1 class="text" id="orange1">
+        Having
+        <span class="licht-beige"> Some </span>
+      </h1>
+      <h1 class="text" id="orange2">
+        Good
+        <span class="licht-beige">Ideas</span>
+      </h1>
+      <h1 class="text">Ideas<span id="SY">Since Yesterday</span></h1>
+    </div>
+    <div class="first-box"></div>
+    <script
+      src="https://kit.fontawesome.com/20f00b0fa1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // text
+      gasp.registerPlugin(ScrollTrigger);
+
+      const textElements = gsap.utils.toArray(".text");
+
+      textElements.forEach((text) => {
+        gasp.to(text, {
+          backgroundSize: "100%",
+          ease: "none",
+          scrollTrigger: {
+            trigger: text,
+            start: "center 80%",
+            end: "center 20%",
+            scrub: true,
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
